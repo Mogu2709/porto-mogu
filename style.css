@@ -60,22 +60,37 @@ section {
 #hero p.jabatan {
     font-size: 1.5rem;
 }
+#projects .daftar-project {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 320px)) ;
+    gap: 1.5rem;
+    justify-content: center;
+}
 
 #projects {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-#projects article h3 {
-    font-size: 20px;
-}
-#projects article{
-    max-width: 60ch;
-    padding: 1rem var(--jarak-samping);
-    border: 1px solid var(--warna-text);
-    border-radius: 0.5rem;
+    text-align: center;
 }
 
+#projects article{
+    max-width: 60ch;
+    padding: 1.5rem var(--jarak-samping);
+    border: 1px solid var(--warna-aksen);
+    border-radius: 1rem;
+    text-align: start;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact ul {
+    display: flex;
+    justify-content: space-around;
+}
 .tombol {
     border-radius: 3rem;
     background-color: var(--warna-text);
