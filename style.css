@@ -12,6 +12,11 @@
   box-sizing:border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
 body {
     font-family: system-ui, sans-serif;
     background-color: var(--warna-latar);
@@ -27,25 +32,42 @@ a {
 
 header {
     display:flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
     padding: 1rem var(--jarak-samping);
+    background-color: var(--warna-latar);
 }
+
 
 nav ul{
     display: flex;
     gap: 1.5rem;
     list-style:none;
 }
+nav ul li a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.3s, text-underline-offset 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration-color: var(--warna-text);
+    text-underline-offset: 10px;
+}
 
 section {
-    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.75rem ;
+    padding: 3rem var(--jarak-samping);
 }
 
 #hero {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     align-items: flex-start;
     padding:6rem var(--jarak-samping);
     text-align: left;
@@ -60,31 +82,39 @@ section {
 #hero p.jabatan {
     font-size: 1.5rem;
 }
-#projects .daftar-project {
+#project .daftar-project {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 320px)) ;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 350px)) ;
     gap: 1.5rem;
     justify-content: center;
 }
 
-#projects {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+#project {
     text-align: center;
 }
 
-#projects article{
+#project article{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
     max-width: 60ch;
-    padding: 1.5rem var(--jarak-samping);
+    padding: 1.5rem;
     border: 1px solid var(--warna-aksen);
     border-radius: 1rem;
     text-align: start;
+
 }
 
-#contact {
+#skill .daftar-skill {
+    list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap;
+    gap: 1rem;
+}
+
+#skill .daftar-skill li {
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
 }
 
 #contact ul {
@@ -92,13 +122,15 @@ section {
     justify-content: space-around;
 }
 .tombol {
-    border-radius: 3rem;
+    border-radius: 1.75rem;
     background-color: var(--warna-text);
     color: var(--warna-latar);
-    padding: 1rem  var(--jarak-samping);
+    padding: 0.75rem 3rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .tombol:hover {
-    background-color: var(--warna-aksen);
+    transform: translateY(-3px);
+    box-shadow: 5px 10px black;
 }
 
 footer{
