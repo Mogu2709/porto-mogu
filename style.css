@@ -136,3 +136,25 @@ section {
 footer{
     padding:2rem  var(--jarak-samping);
 }
+
+
+/* RESPONSIF */
+@media (max-width: 600px) {
+    :root {
+        --jarak-samping: 1.25rem;
+    }
+
+    #hero {
+        padding: 4rem var(--jarak-samping);
+    }
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero p.jabatan {
+        font-size:1.25rem;
+    }
+
+    nav ul {
+        gap: 0.75rem;
+    }
+}
