@@ -79,21 +79,24 @@ section {
 #hero p {
     max-width: 60ch;
 }
-#hero p.jabatan {
+#hero p.fields {
     font-size: 1.5rem;
 }
-#project .daftar-project {
+
+#abouts p {
+    max-width: 65ch;
+}
+
+#projects {
+    text-align: center;
+}
+#projects .project-list {
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(280px, 350px)) ;
     gap: 1.5rem;
     justify-content: center;
 }
-
-#project {
-    text-align: center;
-}
-
-#project article{
+#projects article{
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -105,30 +108,39 @@ section {
 
 }
 
-#skill .daftar-skill {
+#projects article img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+#skills .skill-list {
     list-style: none;
     display: flex;
     flex-wrap:wrap;
     gap: 1rem;
 }
 
-#skill .daftar-skill li {
-    border: 1px solid white;
+#skills .skill-list li {
+    border-radius: 2rem;
+    border: 1px solid var(--warna-aksen);
     padding: 0.5rem 1rem;
 }
 
-#contact ul {
+#contacts ul {
     display: flex;
-    justify-content: space-around;
+    list-style: none;
+    gap: 1.5em;
 }
-.tombol {
+.btn {
     border-radius: 1.75rem;
     background-color: var(--warna-text);
     color: var(--warna-latar);
     padding: 0.75rem 3rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.tombol:hover {
+.btn:hover {
     transform: translateY(-3px);
     box-shadow: 5px 10px black;
 }
@@ -150,7 +162,7 @@ footer{
     #hero h1 {
         font-size: 2rem;
     }
-    #hero p.jabatan {
+    #hero p.fields {
         font-size:1.25rem;
     }
 
